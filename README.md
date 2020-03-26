@@ -20,10 +20,10 @@ The intent is to run through the initial MediaWiki setup, have MediaWiki generat
 
 * Download and save the `LocalSettings.php` into this folder
 
-* Stop the running container
+* Stop the running setup container and remove it
 
   ```
-  :> docker-compose stop
+  :> docker-compose down
   ```
 
 * Open the `docker-compose.yaml`, uncomment the line mounting the `LocalSettings.php`, save the file
@@ -39,6 +39,12 @@ The intent is to run through the initial MediaWiki setup, have MediaWiki generat
 
 This section follows the install guideline of [Semantic MediaWiki][1] at their [guide][2].
 
+* Stop the running container
+
+  ```
+  :> docker-compose stop
+  ```
+
 * Append `enableSemantics()` to the end of `LocalSettings.php`
 
   ```
@@ -47,17 +53,17 @@ This section follows the install guideline of [Semantic MediaWiki][1] at their [
   _Note:_ as this is a proof-of-concept, the host parameter to `enableSemantics()` is empty. (According
   to [3] this shouldn't be a problem.) 
   
-* Run `update.php`
- 
-  ```
-  :> docker-compose run smw php maintenance/update.php
-  ```
-  
 * Start the configured Semantic MediaWiki
 
   ```
-  :> docker-compose up -d
+  :> docker-compose start
   ```
+
+* Run `update.php`
+ 
+  ```
+  :> docker-compose exec smw php maintenance/update.php
+  ```  
 
 * Test your vanilla SMW  at http://localhost:8081
     
