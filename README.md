@@ -1,6 +1,17 @@
+# Semantic MediaWiki Docker file for DLG
+DLG: [Data learning guild](https://data-learning.com/guild)
+
+1. cloned from https://gitlab.com/hcc23/semantic-mediawiki-docker
+1. Add Mediawiki extentions
+  * Import Itembox template[1] from Wikipedia (following [the oficial process](https://www.mediawiki.org/wiki/Manual:Importing_Wikipedia_infoboxes_tutorial))
+  * Install UserMerge[2] extention
+
+---
+Copyed from https://gitlab.com/hcc23/semantic-mediawiki-docker
+
 # Semantic MediaWiki
 
-Create and start a Docker image that contains a _vanilla_ [Semantic MediaWiki][1]
+Create and start a Docker image that contains a _vanilla_ [Semantic MediaWiki][3]
 
 
 ## Step 1: Get MediaWiki up and running
@@ -37,7 +48,7 @@ The intent is to run through the initial MediaWiki setup, have MediaWiki generat
 
 ## Step 2: Activate Semantic MediaWiki
 
-This section follows the install guideline of [Semantic MediaWiki][1] at their [guide][2].
+This section follows the install guideline of [Semantic MediaWiki][3] at their [guide][4].
 
 * Stop the running container
 
@@ -51,7 +62,7 @@ This section follows the install guideline of [Semantic MediaWiki][1] at their [
   :> echo "enableSemantics();" >> LocalSettings.php
   ```
   _Note:_ as this is a proof-of-concept, the host parameter to `enableSemantics()` is empty. (According
-  to [3] this shouldn't be a problem.) 
+  to [5] this shouldn't be a problem.) 
   
 * Start the configured Semantic MediaWiki
 
@@ -66,8 +77,9 @@ This section follows the install guideline of [Semantic MediaWiki][1] at their [
   ```  
 
 * Test your vanilla SMW  at http://localhost:8081
-    
 
-[1]: https://www.semantic-mediawiki.org
-[2]: https://www.semantic-mediawiki.org/wiki/Help:Installation/Quick_guide
-[3]: https://www.semantic-mediawiki.org/w/index.php?title=Help:EnableSemantics
+[1]: https://en.wikipedia.org/wiki/Template:Infobox
+[2]: https://www.mediawiki.org/wiki/Extension:UserMerge
+[3]: https://www.semantic-mediawiki.org
+[4]: https://www.semantic-mediawiki.org/wiki/Help:Installation/Quick_guide
+[5]: https://www.semantic-mediawiki.org/w/index.php?title=Help:EnableSemantics
