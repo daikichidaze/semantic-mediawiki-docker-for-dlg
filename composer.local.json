@@ -12,10 +12,52 @@
         "reference": "REL1_34"
         }
       }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "mediawiki/ParserFunctions",
+        "type": "mediawiki-extension",
+        "version": "1.4.0",
+        "source": {
+        "type": "git",
+        "url": "https://github.com/wikimedia/mediawiki-extensions-ParserFunctions",
+        "reference": "REL1_34"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "mediawiki/Scribunto",
+        "type": "mediawiki-extension",
+        "version": "1.34",
+        "source": {
+        "type": "git",
+        "url": "https://github.com/wikimedia/mediawiki-extensions-Scribunto",
+        "reference": "REL1_34"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "mediawiki/TemplateStyles",
+        "type": "mediawiki-extension",
+        "version": "1.34",
+        "source": {
+        "type": "git",
+        "url": "https://github.com/wikimedia/mediawiki-extensions-TemplateStyles",
+        "reference": "REL1_34"
+        }
+      }
     }
   ],
   "require": {
     "mediawiki/semantic-media-wiki": "~3.0",
-    "mediawiki/UserMerge": "~1.34"
+    "mediawiki/UserMerge": "~1.34",
+    "mediawiki/ParserFunctions": "~1.4",
+    "mediawiki/Scribunto": "~1.34",
+    "mediawiki/TemplateStyles": "~1.34"
   }
 }

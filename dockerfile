@@ -14,3 +14,6 @@ RUN curl -sS https://getcomposer.org/installer | php \
 # update mediawiki extensions via composer
 COPY composer.local.json .
 RUN composer update --no-dev
+
+# permissions for the Scribunto Lua binaries
+RUN chmod a+x extensions/Scribunto/includes/engines/LuaStandalone/binaries/lua5_1_5_linux_64_generic/lua
